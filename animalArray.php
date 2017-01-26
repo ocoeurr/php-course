@@ -45,7 +45,7 @@ foreach ($mixedTwoWordAnimals as $continent => $animal) {
 }
 
 foreach ($mixedTwoWordAnimals as $continent => $animal) {
-  echo "<h1>".$continent."</h1>";
+  echo "<h2>".$continent."</h2>";
   echo "</br>";
   foreach ($animal as $animalName => $value) {
       echo implode(" ", $mixedTwoWordAnimals[$continent][$animalName]);

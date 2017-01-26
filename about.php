@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-<body>
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors',1);
 ?>
+<!DOCTYPE html>
+<html>
+<body>
 <meta charset=UTF-8>
 <title>About me</title>
 <h1>

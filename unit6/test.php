@@ -41,8 +41,8 @@ $userAnswers = [];
 <button type="submit">Отправить</button>
   </form>
 <?php
-echo "</br>"."Результаты:"."</br>";
 if (isPost()) {
+echo "</br>"."Результаты:"."</br>";
   for ($i = 0; $i < count($test); $i++)  {
     if ($userAnswers[$i] == $test[$i]["answer"]) {
       echo $test[$i]["id"]." - верно";

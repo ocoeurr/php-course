@@ -36,10 +36,23 @@ $userAnswers = [];
         $userAnswers[$i] = trim($userAnswers[$i]);
         $userAnswers[$i] = mb_strtolower($userAnswers[$i]);
       }
-
-	}
+    }
 	?>
 <button type="submit">Отправить</button>
   </form>
+<?php
+echo "</br>"."Результаты:"."</br>";
+if (isPost()) {
+  for ($i = 0; $i < count($test); $i++)  {
+    if ($userAnswers[$i] == $test[$i]["answer"]) {
+      echo $test[$i]["id"]." - верно";
+      echo "</br>";
+    } else {
+      echo $test[$i]["id"]." - не угадали, правильный ответ - ".$test[$i]["answer"];
+      echo "</br>";
+    }
+  }
+}
+?>
   </body>
   </html>

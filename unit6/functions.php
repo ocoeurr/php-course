@@ -1,4 +1,8 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors",1);
+ ?>
+ <?php
 function getData($id) {
     $data = file_get_contents(__DIR__ ."/tests/".$id.".json");
     $array = json_decode($data, true);
@@ -22,14 +26,8 @@ function uploadFile() {
 }
 
 function countTests() {
-  $dir = opendir(__DIR__. "/tests/");
-  $count = 0;
-  while($file = readdir($dir)){
-    if($file == '.' || $file == '..' || is_dir('path/to/dir' . $file)){
-        continue;
-    }
-    $count++;
-  }
+  $array = getList();
+  $count = count($array);
   return $count;
 }
 
@@ -46,9 +44,14 @@ function getParamPost($name, $defaultValue = null) {
 }
 
 function getList() {
-  $dir = dirname(__DIR__) . "/unit6/tests/";
-  $array = scandir($dir);
+  $dir = opendir(__DIR__. "/tests/");
+  $array = [];
+  while($file = readdir($dir)){
+    if($file == '.' || $file == '..' || is_dir('path/to/dir' . $file)){
+        continue;
+    }
+    $array[] = $file;
+  }
   return $array;
 }
-
 ?>

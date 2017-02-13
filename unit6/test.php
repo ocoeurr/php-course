@@ -11,7 +11,6 @@ ini_set("display_errors",1);
       $id = 1;
     }
     $test = getData($id);
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -25,7 +24,6 @@ ini_set("display_errors",1);
 <form enctype="multipart/form-data" method="POST">
 <?php
 $userAnswers = [];
-
 	for ($i = 0; $i < count($test); $i++) {
     echo "<label for=\"name\">".$test[$i]["id"].". ".$test[$i]["question"]."</label>";
     echo "</br> </br>";

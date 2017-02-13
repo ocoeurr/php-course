@@ -16,19 +16,13 @@ ini_set("display_errors",1);
 <body>
   <?php
   $testsList = getList();
-
-  if (count($testsList) > 0) {
+  if (countTests() > 0) {
     echo "<h2>"."Доступные тесты:"."</h2>";
-    //ниже костыль для удаления скрытых системных файлов Mac OS, почему-то пока что не получилось загнать его в функцию (не все системные файлы удаляются тогда)
     foreach ($testsList as $i => $value) {
-    if  (substr($testsList[$i], strrpos($testsList[$i],".json")) != ".json") {
-    unset ($testsList[$i]);
-   } else {
       echo "</br>";
       echo $testsList[$i];
-    }
-  }
-}
+   }
+ }
 ?>
   </body>
   </html>

@@ -66,23 +66,23 @@ $myFirstBoard->cover = "K2";
 $myFirstBoard->stickers = 10;
 
 $mySecondBoard = new Snowboard("Flow");
-$myFirstBoard->mounting = "green";
-$myFirstBoard->cover = "Trial";
-$myFirstBoard->stickers = 5;
+$mySecondBoard->mounting = "green";
+$mySecondBoard->cover = "Trial";
+$mySecondBoard->stickers = 5;
 
 $myBoardForJibbing = new Snowboard("Bataleon");
-$myFirstBoard->mounting = "red";
-$myFirstBoard->cover = "K2";
-$myFirstBoard->stickers = 7;
+$myBoardForJibbing->mounting = "red";
+$myBoardForJibbing->cover = "K2";
+$myBoardForJibbing->stickers = 7;
 
 $myBoardForCarving = new Snowboard("Burton");
-$myFirstBoard->mounting = "yellow";
-$myFirstBoard->cover = "Burton";
-$myFirstBoard->stickers = 3;
+$myBoardForCarving->mounting = "yellow";
+$myBoardForCarving->cover = "Burton";
+$myBoardForCarving->stickers = 3;
 
 $myBoardForFreeride = new Snowboard("Capita");
-$myFirstBoard->mounting = "black";
-$myFirstBoard->cover = "Burton";
-$myFirstBoard->stickers = 15;
+$myBoardForFreeride->mounting = "black";
+$myBoardForFreeride->cover = "Burton";
+$myBoardForFreeride->stickers = 15;
 
 ?>
